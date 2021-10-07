@@ -38,7 +38,7 @@ public class Consumidor {
     public String toString() {
         StringBuilder retorno = new StringBuilder();
         retorno.append("\n O nome do consumidor é: " + getNome());
-        retorno.append("O e-mail do consumidor é: " + getEmail());
+        retorno.append("\n O e-mail do consumidor é: " + getEmail());
         return retorno.toString();
     }
 }

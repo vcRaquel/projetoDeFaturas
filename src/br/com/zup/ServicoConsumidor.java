@@ -8,7 +8,7 @@ public class ServicoConsumidor {
 
     //validar email
     public static void validarEmail(String email){
-        if (email.contains("@")){
+        if (!email.contains("@")){
             System.out.println("Email inválido");
         }
     }
