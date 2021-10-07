@@ -1,5 +1,6 @@
 package br.com.zup;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class Sistema {
@@ -28,5 +29,12 @@ public class Sistema {
         double valor = capturarDados("\n Digite o valor da fatura: ").nextInt();
         String dataVencimento = capturarDados("\n Digite a data de vencimento da fatura: ").nextLine();
         return ServicoFatura.cadastrarFatura(email, valor, dataVencimento);
+    }
+
+    public static List<Fatura> pesquisarFatura(){
+        String email = capturarDados("Digite o email do consumidor: ").nextLine();
+        ServicoConsumidor.validarEmail(email);
+        List<Fatura> faturas = ServicoFatura.buscarFaturaPorEmailConsumidor(email);
+        return faturas;
     }
 }

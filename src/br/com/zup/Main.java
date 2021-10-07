@@ -3,7 +3,14 @@ package br.com.zup;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println(Sistema.cadastrarConsumidor());
-
+        try{
+Sistema.cadastrarConsumidor();
+Sistema.cadastrarConsumidor();
+Sistema.cadastrarFatura();
+Sistema.cadastrarFatura();
+            System.out.println(Sistema.);
+    }catch (Exception erro){
+            System.out.println(erro.getMessage());
+        }
     }
 }
