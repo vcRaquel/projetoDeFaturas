@@ -13,6 +13,10 @@ public class ServicoConsumidor {
         }
     }
     //cadastrar consumidor
-
+public static Consumidor cadastrarConsumidor(String nome, String email){
+        validarEmail(email);
+        Consumidor consumidor = new Consumidor(nome, email);
+        return consumidor;
+}
     //pesquisar consumidor por email
 }
