@@ -51,7 +51,7 @@ public class Fatura {
     public String toString() {
         StringBuilder retorno = new StringBuilder();
         retorno.append("\n Titular da fatura: " + consumidor.getNome());
-        retorno.append("\n Valor da fatura: " + valor);
+        retorno.append("\n Valor da fatura R$: " + valor);
         retorno.append("\n Data de vencimento: " + data);
         return retorno.toString();
     }

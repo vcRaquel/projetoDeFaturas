@@ -7,16 +7,17 @@ public class ServicoConsumidor {
     private static List<Consumidor> consumidores = new ArrayList<>();
 
     //validar email
-    public static void validarEmail(String email) {
+    public static void validarEmail(String email) throws Exception{
         if (!email.contains("@")) {
-            System.out.println("Email inválido");
+            throw new Exception("Email inválido");
         }
     }
 
     //cadastrar consumidor
-    public static Consumidor cadastrarConsumidor(String nome, String email) {
+    public static Consumidor cadastrarConsumidor(String nome, String email) throws Exception{
         validarEmail(email);
         Consumidor consumidor = new Consumidor(nome, email);
+        consumidores.add(consumidor); // fiz agora
         return consumidor;
     }
 
@@ -27,6 +28,13 @@ public class ServicoConsumidor {
                 return consumidorReferencia;
             }
         }//para dizer ode a exceção pode acontecer
-        throw new Exception("Consumidor não encontrado");
+        throw new Exception("Consumidor não encontrado no sistema");
     }
+
+//    //exibir lista de consumidores fiz agora só pra testar
+//    public static void exibirConsumidores(){
+//        for (Consumidor referencia: consumidores){
+//            System.out.println(referencia);
+//        }
+//    }
 }
