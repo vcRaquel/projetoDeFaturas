@@ -5,7 +5,8 @@ public class Main {
     public static void main(String[] args) {
         try {
             Sistema.cadastrarConsumidor();
-            Sistema.cadastrarFatura();
+            Sistema.cadastrarConsumidor();
+
             Sistema.cadastrarFatura();
             System.out.println(Sistema.buscarFaturaPorEmailConsumidor());
         } catch (Exception erro) {

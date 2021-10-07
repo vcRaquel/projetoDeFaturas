@@ -13,9 +13,19 @@ public class ServicoConsumidor {
         }
     }
 
+    //verificar se email já existe no cadastro
+    public static void verificarEmailNaListaCadastrada(String email) throws Exception{
+        for (Consumidor referencia: consumidores){
+            if (referencia.getEmail().equals(email)){
+                throw new Exception("Este email já está cadastrado");
+            }
+        }
+    }
+
     //cadastrar consumidor
     public static Consumidor cadastrarConsumidor(String nome, String email) throws Exception{
         validarEmail(email);
+        verificarEmailNaListaCadastrada(email);
         Consumidor consumidor = new Consumidor(nome, email);
         consumidores.add(consumidor); // fiz agora
         return consumidor;
