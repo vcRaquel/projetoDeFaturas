@@ -45,6 +45,8 @@ public class Fatura {
         this.data = data;
     }
 
+
+
     @Override
     public String toString() {
         StringBuilder retorno = new StringBuilder();
